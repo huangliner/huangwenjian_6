@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		    //1、var a=[2,4,{x:2,y:3},true,[5,6]];---用every()方法实现判断a中的元素是否全为数字类型
+		    var n1 = [2,4,{x:2,y:3},true,[5,6]];
+			var n2 = n1.every(item =>{				
+				return typeof(item) === "number";
+			});
+			console.log(n2);							
+			
+			var m = n.some(item =>{					
+				return typeof(item) === "number";
+			});
+			console.log(m);					
+			
+			
+			//2、检测数组var num=[1,6,3,9]中元素的值是否在2-10之间（若num中有非数字返回false）
+			var num=[1,6,3,9];
+			var dataElent = num.every(item =>{
+				if(item >= 2 && item <= 10 && !isNaN(item)){
+					return true
+				}else{
+					return false
+				}
+			});
+			console.log(dataElent);
+			
+			
+			//3、var a=[2,4,{x:2,y:3},true,[5,6]];---用some()方法实现判断a中的元素是否全为数字类型
+			var n1=[2,4,{x:2,y:3},true,[5,6]]1
+			var n2=n1.some(function(value){
+				return value.constructor === Number?true:false;
+			});
+			console.log(n2);
+		</script>
+	</body>
+</html>
