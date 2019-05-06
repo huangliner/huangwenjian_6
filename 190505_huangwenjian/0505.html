@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+        function Student(name,age,sex,score) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.score = score;
+        this.sayHi = function () {
+        console.log("大家好，我是" + this.name );
+        }
+    }
+        var s1 = new Student("zs",18,1,10);
+        var s2 = new Student("112s",18,1,10);
+        s1.sayHi();
+        s2.sayHi();
+        var o = new Object();
+        for (var i = 0; i < 10; i++) {
+        o["n" + i] = i;
+    }
+        console.log(o.n3)
+        </script>
+	</body>
+</html>
