@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				font: normal 14px;
+				color: #eeeeee;
+			}
+			ul {
+				list-style-type: none;
+			}
+			a {
+				text-decoration: none;
+			}
+			#box1 {
+				width: 400px;
+				height:200px;
+				margin: 100px auto;
+				background: red;
+			}
+			#box1-1 {
+				height: 40px;
+			}
+			#box1-1 li {
+				display: block;
+				float: left;
+				width: 100px;
+				line-height: 30px;
+				text-align: center;
+				background-color: #666666;
+			}
+			#box1-1 li:hover {
+				cursor: pointer;
+				color: white;
+			}
+			#box1-1 li.active {
+				background-color: yellow;
+			}
+			#box1 div {}
+			#box1 div li {
+				height: 30px;
+				line-height: 30px;
+				text-indent: 8px;
+			}
+			.a {
+				display: block;
+			}
+			.b {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box1">
+			<ul id="box1-1">
+				<li class="active">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+			<div>
+				<ul>
+					<li><a href="javascript:;">asfgasfaiojfkWJFKLJFPJFOPIJFPoijf</a></li>
+					<li><a href="javascript:;">afOPKJFGOPDSKGOPSJfgosjfdopsDJfgodsj</a></li>
+					<li><a href="javascript:;">fIOHjiodshgfidjshgighsidjhguisahgidduas </a></li>
+					<li><a href="javascript:;">fiojioawjiofjiojfaoisdjfiosjaagjjg</a></li>
+				</ul>
+			</div>
+			<div class="b">
+				<ul>
+					<li><a href="javascript:;">49517851559491594159194891585489154651461</a></li>
+					<li><a href="javascript:;">134324324532475678664545678657545745445</a></li>
+					<li><a href="javascript:;">45675756756767675427572551927418921719514895 </a></li>
+					<li><a href="javascript:;">1879154912495129451274219421978219721987218791</a></li>
+				</ul>
+			</div>
+			<div class="b">
+				<ul>
+					<li><a href="javascript:;">rfgdfgfdgdfzgsfdsatgfsfsdtg</a></li>
+					<li><a href="javascript:;">reyrgfdgdfagafsFADADASFFSDGGF</a></li>
+					<li><a href="javascript:;">RFfhOIUSFIDSJFOISDJFIOJFSPofj </a></li>
+					<li><a href="javascript:;">fasdiojdiosajdioJDOASJDIOJDIOJ</a></li>
+				</ul>
+			</div>
+			<div class="b">
+				<ul>
+					<li><a href="javascript:;">4597812924221421432213134/a></li>
+					<li><a href="javascript:;">45241242343434343434343</a></li>
+					<li><a href="javascript:;">3434535465545242424243245</a></li>
+					<li><a href="javascript:;">746786786657654645676464524</a></li>
+				</ul>
+			</div>
+
+			<script>
+				function getTad() {
+					var a1 = document.getElementById("box1-1");
+					var a2 = a1.getElementsByTagName("li");
+					var a3 = document.getElementById("box1");
+					var a4 = a3.getElementsByTagName("div");
+					for (var i = 0; i < a2.length; i++) {
+						a2[i].index = i;
+						a2[i].onmouseover = function() {
+							for (var i = 0; i < a2.length; i++) {
+								a2[i].className = "";
+							}
+							this.className = "active";
+							for (var j = 0; j < a4.length; j++) {
+								a4[j].className = "b";
+							}
+							a4[this.index].className = "a";
+						}
+					}
+				}
+				getTad();
+			</script>
+	</body>
+</html>
